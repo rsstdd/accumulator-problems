@@ -253,20 +253,20 @@ If you pass it "hello" then it should return "olleh"
 
 
 
-// function reverseString(str) {
-//   let reverse = '';
-//
-//   for (var i = str.length; i > 0; i--) {
-//     reverse += str[i];
-//   }
-//
-//   return reverse;
-// }
-
-
 function reverseString(str) {
-  return str.split('').reverse().join('');
+  let reverse = '';
+
+  for (var i = str.length; i > 0; i--) {
+    reverse += str[i];
+  }
+
+  return reverse;
 }
+
+
+// function reverseString(str) {
+//   return str.split('').reverse().join('');
+// }
 
 
 
@@ -287,19 +287,19 @@ If you pass it "haha" then it should return true because "ha" (the first half) e
 If you pass it "yay" then it should return false because it's odd
 If you pass it "heehaw" then it should return false because "hee" doesn't equal "haw"
 */
-
-function repeats(str) {
-  let str = '';
-  let half = str.length/2;
-  let firstHalf = [];
-  let secondHalf = [];
-
-  if (str.length % 2 !=== 0) {
-    return false;
-  } else if () {
-
-  }
-}
+//
+// function repeats(str) {
+//   let str = '';
+//   let half = str.length/2;
+//   let firstHalf = [];
+//   let secondHalf = [];
+//
+//   if (str.length % 2 !== 0) {
+//     return false;
+//   } else if () {
+//
+//   }
+// }
 
 
 
@@ -318,15 +318,15 @@ Example:
 If you pass it "abcdef" then it should return "ace" because those represent every other letter
 */
 
-function everyOther(str) {
-  let newStr = '';
-
-  for (var i = 0; i < str.length; i++) {
-    // +newStr += str[i] + (i + 2);
-  }
-
-  return newStr;
-}
+// function everyOther(str) {
+//   let newStr = '';
+//
+//   for (var i = 0; i < str.length; i++) {
+//     // +newStr += str[i] + (i + 2);
+//   }
+//
+//   return newStr;
+// }
 
 
 
@@ -348,9 +348,25 @@ If you pass "aba" it should return false
 
 
 
-
-
-
+// function allEqual(str) {
+//   let strArr = [];
+//
+//   if (str.length === 0) {
+//     return true;
+//   }
+//
+//   for (var i = 0; i < str.length; i++) {
+//     // strArr.push(str[i]);
+//     console.log(strArr.indexOf(str[i]));
+//     console.log(strArr);
+//     if (strArr.indexOf(str[i]) > -1) {
+//       return true;
+//     } else {
+//       return false;
+//     }
+//   }
+//   console.log(strArr);
+// }
 
 
 /*
@@ -367,7 +383,15 @@ If you pass "246" it should return 10
 */
 
 
+function sumLetters(str) {
+  let sum = 0;
 
+  for (var i = 0; i < str.length; i++) {
+    sum += parseInt(str[i]);
+  }
+
+  return sum;
+}
 
 
 
@@ -387,7 +411,11 @@ If you pass "you" it should return 2
 
 
 
-
+// function countVowels(str) {
+//   let count = 0;
+//
+//
+// }
 
 
 
@@ -408,7 +436,15 @@ If you pass "you" it should return ["y", "o", "u"]
 NOTE: do not use the builtin `split` method
 */
 
+function split(str)  {
+  let arr = [];
 
+  for (var i = 0; i < str.length; i++) {
+    arr.push(str[i]);
+  }
+
+  return arr;
+}
 
 
 
@@ -469,6 +505,13 @@ If you pass "Yo" it should return {Y: 1, o: 1}
 If you pass "Hello" it should return {"H": 1, "e": 1, "l": 2, "o": 1}
 */
 
+// function letterCount(str) {
+//   let obj = {};
+//
+//   for (var i = 0; i < str.length; i++) {
+//     str[i]
+//   }
+// }
 
 
 
@@ -492,10 +535,10 @@ If you pass 0,6 it should return true because between 0 and six (the numbers 1,2
 
 
 
-
-function threeOdds(num1, num2) {
-
-}
+//
+// function threeOdds(num1, num2) {
+//
+// }
 
 
 
@@ -512,9 +555,6 @@ Example:
 
 If you pass "a", 3, "*" it should return "**a" - that is, a string of length 3, padded on the left by the "*" character
 */
-
-
-
 
 
 
@@ -685,14 +725,6 @@ If you pass ["Sue", "Will", "Rachel"] it should return "Sue, Will and Rachel"
 */
 
 
-function some(arr) {
-  let str = '';
-
-  for (var i = 0; i < att.length; i++) {
-    att[i]
-  }
-}
-
 
 
 
@@ -716,7 +748,13 @@ If you pass ["Java", Script", "Object", "Notation"] it should return "JSON"
 */
 
 
+function acronym(arr) {
+  let str = '';
 
+  arr.map((item) => str += item[0]);
+
+  return str;
+}
 
 
 
@@ -736,7 +774,13 @@ If you pass [0,-3,2,5] it should return -3
 
 
 
+function min(arr) {
+  let min;
 
+  arr.sort((a, b) => {
+    min += a - b
+  });
+}
 
 
 
