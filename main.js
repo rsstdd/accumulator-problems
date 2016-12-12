@@ -3,8 +3,8 @@
 SAMPLE
 ----------------------------------------
 
-Challenge: Write function named test that returns the string "This Works!". 
-Solution: This one has already been complete for you. 
+Challenge: Write function named test that returns the string "This Works!".
+Solution: This one has already been complete for you.
 
 */
 
@@ -25,10 +25,19 @@ Write function named sum that will take an array of numbers and return the sum o
 Example: if you pass it [1,2,3] then it should return 6 (which is 1 + 2 + 3)
 */
 
+function sum(arr) {
+  var sum = 0;
+
+  for (var i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
 
 
-
-
+// function sum(arr) {
+//   return arr.reduce(function(a, b) { return a+b; }, 0);
+// }
 
 
 
@@ -43,7 +52,15 @@ Write function named doubleNumbers that will take an array of numbers and return
 Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
+function doubleNumbers(arr) {
+  var doubles = [];
 
+  for (var i = 0; i < arr.length; i++) {
+    doubles.push((arr[i] * 2));
+  }
+
+  return doubles;
+}
 
 
 
@@ -65,10 +82,20 @@ Examples:
 - if you call multiplyNumbers([1,2,3], 5) you'd get [5,10,15]
 */
 
+//
+// function multiplyNumbers(numArr, num) {
+//   let arr = [];
+//
+//   for (var i = 0; i < numArr.length; i++) {
+//     arr.push((numArr[i] * num));
+//   }
+//
+//   return arr;
+// }
 
-
-
-
+// function multiplyNumbers(arr, num) {
+//   return arr.map((item) => item * num);
+// }
 
 
 
@@ -85,7 +112,15 @@ Example: if you pass it "abc" then it should return "aabbcc"
 
 
 
+function doubleLetters(str) {
+  let dble = '';
 
+  for (var i = 0; i < str.length; i++) {
+    dble += str[i] + str[i];
+  }
+
+  return dble;
+}
 
 
 
@@ -106,7 +141,16 @@ NOTE: you can assume each input will be the same length
 
 
 
+function interleave(arr1, arr2) {
+  arr3 = [];
 
+  for (var i = 0; i < arr1.length; i++) {
+    arr3.push(arr1[i]);
+    arr3.push(arr2[i]);
+  }
+
+  return arr3;
+}
 
 
 
@@ -124,7 +168,15 @@ Write function named createRange that will take a number and a default value and
 Example: if you pass it 4 and "Hello" then it should return ["Hello", "Hello", "Hello", "Hello"]
 */
 
+function createRange(num, val) {
+  let arr = [];
 
+  for (var i = 0; i < num; i++) {
+    arr.push(val);
+  }
+
+  return arr;
+}
 
 
 
@@ -144,7 +196,15 @@ If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "br
 */
 
 
+function flipArray(arr) {
+  let obj = {};
 
+  for (var i = 0; i < arr.length; i++) {
+    obj[arr[i]] = i;
+  }
+
+  return obj;
+}
 
 
 
@@ -161,12 +221,20 @@ Example:
 
 If you pass it [[2014, "Horse"], [2015, "Sheep"]] then it should return { 2014: "Horse", 2015: "Sheep" }
 
+obj[i].[i][i]
+
 */
 
 
+function arraysToObject(arr) {
+  let obj = {};
 
+  for (var i = 0; i < arr.length; i++) {
+    obj[arr[i][0]] = arr[i][1];
+  }
 
-
+  return obj;
+}
 
 
 
@@ -185,6 +253,15 @@ If you pass it "hello" then it should return "olleh"
 
 
 
+function reverseString(str) {
+  let reverse = '';
+
+  for (var i = str.length; i > 0; i--) {
+    reverse += str[i];
+  }
+
+  return reverse;
+}
 
 
 
@@ -227,7 +304,15 @@ Example:
 If you pass it "abcdef" then it should return "ace" because those represent every other letter
 */
 
+function everyOther(str) {
+  let newStr = '';
 
+  for (var i = 0; i < str.length; i++) {
+    // +newStr += str[i] + (i + 2);
+  }
+
+  return newStr;
+}
 
 
 
@@ -394,7 +479,9 @@ If you pass 0,6 it should return true because between 0 and six (the numbers 1,2
 
 
 
+function threeOdds(num1, num2) {
 
+}
 
 
 
@@ -434,7 +521,15 @@ If you pass "b", 3 it should return "bb"
 
 
 
+function createString(num, letter) {
+  str = '';
 
+  for (var i = 0; i < num; i++) {
+    str +=  letter;
+  }
+
+  return str;
+}
 
 
 
@@ -576,7 +671,13 @@ If you pass ["Sue", "Will", "Rachel"] it should return "Sue, Will and Rachel"
 */
 
 
+function some(arr) {
+  let str = '';
 
+  for (var i = 0; i < att.length; i++) {
+    att[i]
+  }
+}
 
 
 
@@ -794,4 +895,4 @@ If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
 
 
 
-// 
+//
