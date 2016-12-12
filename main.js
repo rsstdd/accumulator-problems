@@ -82,16 +82,16 @@ Examples:
 - if you call multiplyNumbers([1,2,3], 5) you'd get [5,10,15]
 */
 
-//
-// function multiplyNumbers(numArr, num) {
-//   let arr = [];
-//
-//   for (var i = 0; i < numArr.length; i++) {
-//     arr.push((numArr[i] * num));
-//   }
-//
-//   return arr;
-// }
+
+function multiplyNumbers(numArr, num) {
+  let arr = [];
+
+  for (var i = 0; i < numArr.length; i++) {
+    arr.push((numArr[i] * num));
+  }
+
+  return arr;
+}
 
 // function multiplyNumbers(arr, num) {
 //   return arr.map((item) => item * num);
@@ -253,17 +253,20 @@ If you pass it "hello" then it should return "olleh"
 
 
 
+// function reverseString(str) {
+//   let reverse = '';
+//
+//   for (var i = str.length; i > 0; i--) {
+//     reverse += str[i];
+//   }
+//
+//   return reverse;
+// }
+
+
 function reverseString(str) {
-  let reverse = '';
-
-  for (var i = str.length; i > 0; i--) {
-    reverse += str[i];
-  }
-
-  return reverse;
+  return str.split('').reverse().join('');
 }
-
-
 
 
 
@@ -285,7 +288,18 @@ If you pass it "yay" then it should return false because it's odd
 If you pass it "heehaw" then it should return false because "hee" doesn't equal "haw"
 */
 
+function repeats(str) {
+  let str = '';
+  let half = str.length/2;
+  let firstHalf = [];
+  let secondHalf = [];
 
+  if (str.length % 2 !=== 0) {
+    return false;
+  } else if () {
+
+  }
+}
 
 
 
