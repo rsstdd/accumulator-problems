@@ -154,10 +154,6 @@ function interleave(arr1, arr2) {
 
 
 
-
-
-
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -177,8 +173,6 @@ function createRange(num, val) {
 
   return arr;
 }
-
-
 
 
 
@@ -289,20 +283,19 @@ If you pass it "heehaw" then it should return false because "hee" doesn't equal 
 */
 //
 // function repeats(str) {
-//   let str = '';
+//   let strArr = str.split('');
 //   let half = str.length/2;
 //   let firstHalf = [];
 //   let secondHalf = [];
 //
-//   if (str.length % 2 !== 0) {
+//   if (str.length === 0) {
+//     return true;
+//   } else if (half % 2 !== 0) {
 //     return false;
 //   } else if () {
 //
 //   }
 // }
-
-
-
 
 
 
@@ -322,7 +315,7 @@ If you pass it "abcdef" then it should return "ace" because those represent ever
 //   let newStr = '';
 //
 //   for (var i = 0; i < str.length; i++) {
-//     // +newStr += str[i] + (i + 2);
+//     newStr += str[i];
 //   }
 //
 //   return newStr;
@@ -348,25 +341,19 @@ If you pass "aba" it should return false
 
 
 
-// function allEqual(str) {
-//   let strArr = [];
-//
-//   if (str.length === 0) {
-//     return true;
-//   }
-//
-//   for (var i = 0; i < str.length; i++) {
-//     // strArr.push(str[i]);
-//     console.log(strArr.indexOf(str[i]));
-//     console.log(strArr);
-//     if (strArr.indexOf(str[i]) > -1) {
-//       return true;
-//     } else {
-//       return false;
-//     }
-//   }
-//   console.log(strArr);
-// }
+function allEqual(str) {
+  if (str.length === 0) {
+    return '';
+  }
+
+  const notSame = str.split('').filter((item, index) => item === str[0]);
+
+  if (str.length === notSame.length) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
 
 /*
@@ -411,13 +398,16 @@ If you pass "you" it should return 2
 
 
 
-// function countVowels(str) {
-//   let count = 0;
-//
-//
-// }
+function countVowels(str) {
+  let count = 0;
+  for (var i = 0; i < str.length; i++) {
+    if (['a', 'e', 'i', 'o', 'u'].indexOf(str[i]) !== -1) {
+      count += 1;
+    }
+  }
 
-
+  return count;
+}
 
 
 
@@ -466,6 +456,15 @@ If you pass "Hello" it should return [ 72, 101, 108, 108, 111 ]
 */
 
 
+// function getCodePoints(arr) {
+//   codePoints = [];
+//
+//   for (var i = 0; i < arr.length; i++) {
+//     codePoints.push(charCodeAt(arr[i]));
+//     }
+//
+//   return codePoints;
+// }
 
 
 
@@ -556,8 +555,30 @@ Example:
 If you pass "a", 3, "*" it should return "**a" - that is, a string of length 3, padded on the left by the "*" character
 */
 
+// function leftPad(str, len, char) {
+//   let padded = str;
+//
+//   for (let i = 0; i <= len - str.length; i++) {
+//     // console.log(char + str);
+//     padded = char.concat(padded);
+//   }
+//
+//   return padded;
+// }
 
+git remote add upstream https://github.com/gSchool/cs-exercises.git : git pull upstream master
 
+function leftPad(str, len, char) {
+  if (str.length > len) {
+    return str;
+  }  else {
+    return char.repeat(len - str.length).concat(str);
+  }
+}
+//
+// function leftPad(str, len, char) {
+//   return Array(len - str.length + 1).join(char).concat(str);
+// }
 
 
 /*
@@ -603,8 +624,23 @@ If you pass 4 it should return 24 since that's 4 * 3 * 2 * 1
 If you pass 5 it should return 120 since that's 5 * 4 * 3 * 2 * 1
 */
 
-
-
+//
+// function factorial(num) {
+//   const fact = 0;
+//   let count = num;
+//
+//   if (if num === 0) {
+//     return 1;
+//   }
+//
+//   while (count > num) {
+//     fact = num * (num - 1);
+//   }
+//
+//   count - 1;
+//
+//   return fact;
+// }
 
 
 
@@ -954,3 +990,34 @@ If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
 
 
 //
+// 100,000,000
+//
+// let foo = new Array(10000000);
+//
+// for (var i = 0; i < foo.length; i++) {
+//   foo[i] = 2;
+// }
+//
+// function testPerformance(callback, arr) {
+//   var t0 = performance.now();
+//   callback(arr);
+//   var t1 = performance.now();
+//   return t1 - t0;
+// }
+//
+// function double(arr) {
+//   return arr.map((element) => element * 2);
+// }
+//
+// testPerformance(double, foo);
+//
+//
+// 10000000 = 1312.8449999999993
+// 1000000 = 139.525
+// 100000 = 14.565000000000005
+// 10000 = 1.6700000000000017
+// 1000 = 0.36499999999999844
+// 100 = 0.0799999999999983
+// 10 = 0.10999999999999943
+// 1 = 0.125
+// 0 = 0.03999999999999915
