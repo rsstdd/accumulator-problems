@@ -25,19 +25,19 @@ Write function named sum that will take an array of numbers and return the sum o
 Example: if you pass it [1,2,3] then it should return 6 (which is 1 + 2 + 3)
 */
 
-function sum(arr) {
-  var sum = 0;
-
-  for (var i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum;
-}
-
-
 // function sum(arr) {
-//   return arr.reduce(function(a, b) { return a+b; }, 0);
+//   var sum = 0;
+//
+//   for (var i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//   }
+//   return sum;
 // }
+
+
+function sum(arr) {
+  return arr.reduce(function(a, b) { return a+b; }, 0);
+}
 
 
 
@@ -67,7 +67,6 @@ function doubleNumbers(arr) {
 
 
 
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -82,20 +81,20 @@ Examples:
 - if you call multiplyNumbers([1,2,3], 5) you'd get [5,10,15]
 */
 
-
-function multiplyNumbers(numArr, num) {
-  let arr = [];
-
-  for (var i = 0; i < numArr.length; i++) {
-    arr.push((numArr[i] * num));
-  }
-
-  return arr;
-}
-
-// function multiplyNumbers(arr, num) {
-//   return arr.map((item) => item * num);
+//
+// function multiplyNumbers(numArr, num) {
+//   let arr = [];
+//
+//   for (var i = 0; i < numArr.length; i++) {
+//     arr.push((numArr[i] * num));
+//   }
+//
+//   return arr;
 // }
+
+function multiplyNumbers(arr, num) {
+  return arr.map((item) => item * num);
+}
 
 
 
@@ -343,7 +342,7 @@ If you pass "aba" it should return false
 
 function allEqual(str) {
   if (str.length === 0) {
-    return '';
+    return true;
   }
 
   const notSame = str.split('').filter((item, index) => item === str[0]);
@@ -379,8 +378,6 @@ function sumLetters(str) {
 
   return sum;
 }
-
-
 
 
 
@@ -566,7 +563,7 @@ If you pass "a", 3, "*" it should return "**a" - that is, a string of length 3, 
 //   return padded;
 // }
 
-git remote add upstream https://github.com/gSchool/cs-exercises.git : git pull upstream master
+// git remote add upstream https://github.com/gSchool/cs-exercises.git : git pull upstream master
 
 function leftPad(str, len, char) {
   if (str.length > len) {
@@ -808,19 +805,17 @@ Example:
 If you pass [0,-3,2,5] it should return -3
 */
 
-
-
 function min(arr) {
-  let min;
+  var smallest = arr[0];
 
-  arr.sort((a, b) => {
-    min += a - b
-  });
+  for (var i = 1; i < arr.length; i++){
+    if (arr[i] < smallest){
+        smallest = arr[i];
+    }
+  }
+
+  return smallest;
 }
-
-
-
-
 
 
 
@@ -838,7 +833,13 @@ If you pass [{id: 1, name: "Joe"}, {id: 2, name: "Sue"}] it should return {1: {i
 */
 
 
+function index(arr, prop) {
+  const obj = {};
 
+  for (var i = 0; i < array.length; i++) {
+    obj[i] = i  // array[i]
+  }
+}
 
 
 
